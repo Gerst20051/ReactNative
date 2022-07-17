@@ -98,3 +98,27 @@ info Installing "/Users/andrewgerst/Library/Developer/Xcode/DerivedData/MyTestAp
 info Launching "org.reactjs.native.example.MyTestApp"
 success Successfully launched the app on the simulator
 ```
+
+## React Native Debugger
+
+https://reactnative.dev/docs/debugging#chrome-developer-tools
+
+To debug the JavaScript code in Chrome, select "Debug with Chrome" from the Developer Menu. This will open a new tab.
+
+http://localhost:8081/debugger-ui
+
+## Standalone React Devtools
+
+https://www.npmjs.com/package/react-devtools
+
+Select "Show Inspector" from the Developer Menu to use the React Devtools.
+
+When react-devtools is running, Inspector will enter a special collapsed mode, and instead use the DevTools as primary UI.
+
+In this mode, clicking on something in the simulator will bring up the relevant components in the DevTools.
+
+`[$]> npm install -g react-devtools`
+
+`[$]> react-devtools`
+
+`[$]> npx react-devtools`
