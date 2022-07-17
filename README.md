@@ -88,6 +88,10 @@ To reload the app press **"Cmd + R"** in the simulator
 
 To open developer menu press **"Cmd + D"** in the simulator
 
+To open the workspace in Xcode run the following:
+
+`[$]> open ios/MyTestApp.xcworkspace`
+
 ```
 warn Multiple Podfiles were found: ios/Podfile,vendor/bundle/ruby/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/Podfile.
 Choosing ios/Podfile automatically.
