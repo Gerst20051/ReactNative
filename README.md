@@ -40,6 +40,8 @@ https://reactnative.dev/docs/environment-setup#cocoapods
 
 `[$]> pod install`
 
+`[$]> cd ..`
+
 Ignoring `ffi-1.13.1` because its extensions are not built. Try: `gem pristine ffi --version 1.13.1`
 
 Ignoring `nokogiri-1.10.10` because its extensions are not built. Try: `gem pristine nokogiri --version 1.10.10`
@@ -66,19 +68,21 @@ https://reactnative.dev/docs/environment-setup#step-1-start-metro
 
 `[$]> npx react-native start`
 
+`[$]> yarn start`
+
 To reload the app press **"r"**
 
 To open developer menu press **"d"**
 
 https://facebook.github.io/metro
 
-## Start App
+## Start App (iOS)
 
 https://reactnative.dev/docs/environment-setup#step-2-start-your-application
 
-`[$]> cd ../`
-
 `[$]> npx react-native run-ios`
+
+`[$]> yarn ios`
 
 To reload the app press **"Cmd + R"** in the simulator
 
@@ -97,6 +101,41 @@ success Successfully built the app
 info Installing "/Users/andrewgerst/Library/Developer/Xcode/DerivedData/MyTestApp-fyqnbkoxrzsccrctwwdrzfqppdqa/Build/Products/Debug-iphonesimulator/MyTestApp.app"
 info Launching "org.reactjs.native.example.MyTestApp"
 success Successfully launched the app on the simulator
+```
+
+## Start App (Android)
+
+`[$]> npx react-native run-android`
+
+`[$]> yarn android`
+
+```
+warn Multiple Podfiles were found: ios/Podfile,vendor/bundle/ruby/2.7.0/gems/cocoapods-core-1.11.3/lib/cocoapods-core/Podfile.
+Choosing ios/Podfile automatically.
+If you would like to select a different one, you can configure it via "project.ios.sourceDir".
+You can learn more about it here: https://github.com/react-native-community/cli/blob/master/docs/configuration.md
+info Running jetifier to migrate libraries to AndroidX. You can disable it using "--no-jetifier" flag.
+Jetifier found 945 file(s) to forward-jetify. Using 12 workers...
+info JS server already running.
+/bin/sh: adb: command not found
+info Launching emulator...
+error Failed to launch emulator. Reason: No emulators found as an output of `emulator -list-avds`.
+warn Please launch an emulator manually or connect a device. Otherwise app may fail to launch.
+info Installing the app...
+The operation couldn’t be completed. Unable to locate a Java Runtime.
+Please visit http://www.java.com for information on installing Java.
+error Failed to install the app. Make sure you have the Android development environment set up: https://reactnative.dev/docs/environment-setup.
+Error: Command failed: ./gradlew app:installDebug -PreactNativeDevServerPort=8081
+The operation couldn’t be completed. Unable to locate a Java Runtime.
+Please visit http://www.java.com for information on installing Java
+    at makeError (/Users/andrewgerst/Code/Github/Gerst20051/ReactNative/MyTestApp/node_modules/execa/index.js:174:9)
+    at /Users/andrewgerst/Code/Github/Gerst20051/ReactNative/MyTestApp/node_modules/execa/index.js:278:16
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async runOnAllDevices (/Users/andrewgerst/Code/Github/Gerst20051/ReactNative/MyTestApp/node_modules/@react-native-community/cli-platform-android/build/commands/runAndroid/runOnAllDevices.js:109:5)
+    at async Command.handleAction (/Users/andrewgerst/Code/Github/Gerst20051/ReactNative/MyTestApp/node_modules/@react-native-community/cli/build/index.js:192:9)
+info Run CLI with --verbose flag for more details.
+error Command failed with exit code 1.
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
 ```
 
 ## React Native Debugger
@@ -122,3 +161,15 @@ In this mode, clicking on something in the simulator will bring up the relevant 
 `[$]> react-devtools`
 
 `[$]> npx react-devtools`
+
+## Testing & Linting
+
+`[$]> yarn test`
+
+> jest
+
+`[$]> yarn lint`
+
+> eslint .
+
+`[$]> yarn lint --fix`
